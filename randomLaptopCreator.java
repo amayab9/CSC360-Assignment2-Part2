@@ -5,8 +5,9 @@ Assignment: 2 part 2
 Purpose: learning how to implement cloneable and comparable
 Course: OOP2 - CSC 360
 */
+import java.util.Random;
 public class randomLaptopCreator{
     public static void main(String[] args) {
-        //generate 5 laptops
+        //generate random 5 laptops
     }
 }
