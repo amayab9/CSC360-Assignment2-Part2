@@ -44,7 +44,7 @@ public class Laptop {
     
     /*@Override
     public int compareTo(Laptop l){
-        //comparing the side value to see if they are the same or different
+        //comparing the laptop score
         int returnValue;
         if (){
             returnValue = -1;

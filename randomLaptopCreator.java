@@ -6,10 +6,18 @@ Purpose: learning how to implement cloneable and comparable
 Course: OOP2 - CSC 360
 */
 import java.util.Random;
+import java.util.Arrays;
 public class randomLaptopCreator{
     public static void main(String[] args) {
+
         //generate random 5 laptops
-        Laptop laptop1 = new Laptop();
-        System.out.println(laptop1.toString());
+        Laptop[] laptops = new Laptop[5];
+        
+        for(int i = 0; i < 5; i++){
+            laptops[i] = new Laptop(); 
+            System.out.println(laptops[i]); //print out laptops
+        }
+
+
     }
 }
