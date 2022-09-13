@@ -36,22 +36,25 @@ public class Laptop {
         cpu = r.nextInt(3) + 1;
         graphics = r.nextInt(2);
         screen = r.nextInt(17) + 1;
-        laptopScore = 0;
 
         laptopScore = (2 * cpu / cpuMax) + (2 * ram / ramMax) + (1 * hdd / hddMax) + (graphics) + (1 * screen / screenMax) + (1 * weight / weightMax) + (1 * battery / batteryMax) + (1 * price / priceMax);
 
+    }
+
+    public double getLaptopScore(){
+        return laptopScore;
     }
     
     /*@Override
     public int compareTo(Laptop l){
         //comparing the laptop score
         int returnValue;
-        if (){
+        if (this.laptopScore < laptopScore){
             returnValue = -1;
-        } else if (){
+        } else if (this.laptopScore > laptopScore){
             returnValue = 1;
         } else {
-            returnValue = 0;
+            returnValue = this.laptopScore - laptopScore;
         }
 
         return returnValue;
@@ -65,7 +68,7 @@ public class Laptop {
         } else {
             graphicsValue = "no";
         }
-        return "CPU: " + cpu + " RAM: " + ram + " HDD: " + hdd + " SCREEN: " + screen + " WEIGHT: " + weight + " BATTERY: " + battery + " GRAPHICS: " + graphicsValue +" PRICE: " + price + " SCORE: " + laptopScore;
+        return "CPU: " + cpu + " RAM: " + ram + " HDD: " + hdd + " SCREEN: " + screen + " WEIGHT: " + weight + " BATTERY: " + battery + " GRAPHICS: " + graphicsValue +" PRICE: " + price + " SCORE: " + String.format("%.2f", laptopScore);
     }
     
 }

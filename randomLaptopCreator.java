@@ -12,7 +12,7 @@ public class randomLaptopCreator{
 
         //generate random 5 laptops
         Laptop[] laptops = new Laptop[5];
-        
+
         for(int i = 0; i < 5; i++){
             laptops[i] = new Laptop(); 
             System.out.println(laptops[i]); //print out laptops
