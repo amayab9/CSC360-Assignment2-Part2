@@ -6,8 +6,8 @@ Purpose: learning how to implement cloneable and comparable
 Course: OOP2 - CSC 360
 */
 import java.util.Random;
-public class Laptop implements Comparable<Laptop>{
-    
+public class Laptop {
+    //implements Comparable<Laptop>
     private double ram;
     private double hdd;
     private double weight;
@@ -15,7 +15,7 @@ public class Laptop implements Comparable<Laptop>{
     private double price;
     private double cpu;
     private double screen;
-    private boolean graphics;
+    private double graphics;
     private double laptopScore;
 
     final double ramMax = 32;
@@ -28,9 +28,17 @@ public class Laptop implements Comparable<Laptop>{
 
     public Laptop(){ 
         Random r = new Random();
-        
+        ram = r.nextInt(3) + 1;
+        hdd = r.nextInt(2048) + 1;
+        weight = r.nextInt(6) + 1;
+        battery = r.nextInt(9) + 1;
+        price = r.nextInt(2000) + 1;
+        cpu = r.nextInt(3) + 1;
+        graphics = r.nextInt(2);
+        screen = r.nextInt(17) + 1;
+        laptopScore = 0;
 
-        //laptopScore = (2 * cpu / cpuMax) + (2 * ram / ramMax) + (1 * hdd / hddMax) + (graphics) + (1 * screen / screenMax) + (1 * weight / weightMax) + (1 * battery / batteryMax) + (1 * price / priceMax);
+        laptopScore = (2 * cpu / cpuMax) + (2 * ram / ramMax) + (1 * hdd / hddMax) + (graphics) + (1 * screen / screenMax) + (1 * weight / weightMax) + (1 * battery / batteryMax) + (1 * price / priceMax);
 
     }
     
@@ -51,7 +59,13 @@ public class Laptop implements Comparable<Laptop>{
 
     @Override
     public String toString(){
-        return "CPU: " + " RAM: " + " HDD: " + " SCREEN: " + " WEIGHT: " + " BATTERY: " + " PRICE: " + " SCORE: ";
+        String graphicsValue;
+        if (graphics == 1){
+            graphicsValue = "yes";
+        } else {
+            graphicsValue = "no";
+        }
+        return "CPU: " + cpu + " RAM: " + ram + " HDD: " + hdd + " SCREEN: " + screen + " WEIGHT: " + weight + " BATTERY: " + battery + " GRAPHICS: " + graphicsValue +" PRICE: " + price + " SCORE: " + laptopScore;
     }
     
 }
