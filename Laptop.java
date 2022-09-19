@@ -48,15 +48,14 @@ public class Laptop implements Comparable<Laptop>{
     public int compareTo(Laptop l){
         //comparing the laptop score
         
-        if (this.laptopScore < laptopScore){
+         if (this.laptopScore < l.getLaptopScore()){
             return -1;
-        } else if (this.laptopScore > laptopScore){
+        } else if (this.laptopScore > l.getLaptopScore()){
             return 1;
         } else {
             return 0;
         }
 
-        
     }
 
     @Override
