@@ -18,6 +18,7 @@ public class randomLaptopCreator{
             System.out.println(laptops[i]); //print out laptops
         }
 
+        Arrays.sort(laptops);   
 
     }
 }

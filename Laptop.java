@@ -6,8 +6,7 @@ Purpose: learning how to implement cloneable and comparable
 Course: OOP2 - CSC 360
 */
 import java.util.Random;
-public class Laptop {
-    //implements Comparable<Laptop>
+public class Laptop implements Comparable<Laptop>{
     private double ram;
     private double hdd;
     private double weight;
@@ -45,20 +44,20 @@ public class Laptop {
         return laptopScore;
     }
     
-    /*@Override
+    @Override
     public int compareTo(Laptop l){
         //comparing the laptop score
-        int returnValue;
+        
         if (this.laptopScore < laptopScore){
-            returnValue = -1;
+            return -1;
         } else if (this.laptopScore > laptopScore){
-            returnValue = 1;
+            return 1;
         } else {
-            returnValue = this.laptopScore - laptopScore;
+            return 0;
         }
 
-        return returnValue;
-    }*/
+        
+    }
 
     @Override
     public String toString(){
