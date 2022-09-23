@@ -35,9 +35,7 @@ public class Laptop implements Comparable<Laptop>{
         cpu = r.nextInt(3) + 1;
         graphics = r.nextInt(2);
         screen = r.nextInt(17) + 1;
-
         laptopScore = (2 * cpu / cpuMax) + (2 * ram / ramMax) + (1 * hdd / hddMax) + (graphics) + (1 * screen / screenMax) + (1 * weight / weightMax) + (1 * battery / batteryMax) + (1 * price / priceMax);
-
     }
 
     public double getLaptopScore(){
@@ -46,7 +44,7 @@ public class Laptop implements Comparable<Laptop>{
     
     @Override
     public int compareTo(Laptop l){
-        //comparing the laptop score
+        //comparing the laptop scores...will do smallest to greatest value
         
          if (this.laptopScore < l.getLaptopScore()){
             return -1;

@@ -7,7 +7,7 @@ Course: OOP2 - CSC 360
 */
 import java.util.Random;
 import java.util.Arrays;
-public class randomLaptopCreator{
+public class RandomLaptopCreator{
     public static void main(String[] args) {
 
         //generate random 5 laptops
